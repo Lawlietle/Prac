@@ -6,18 +6,20 @@ import {SignINPassAndEmail} from '../../Firebase-folder/FireBase';
 import { useState, useContext } from 'react'; 
 import { async } from '@firebase/util';
 import {UserContext} from '../User-components/UserContext';
+// Sign in function starts here
 let SignIN= ()=>{
     let fomrField= {
         email:'',
         password:''
     }
-
+    
     let {setCurrentUser} = useContext(UserContext);
 
-
+     // Setting the form field to the empty object we created
     let [form,setForm]= useState(fomrField);
     let {email, password} = form;
 
+     //lets the user Sign in with google pop up when they click on "Sign in with Google" button
     let GoogleHandler = async()=>{
        
         let res= await SingINWithGoogle();
