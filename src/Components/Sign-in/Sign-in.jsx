@@ -6,15 +6,18 @@ import {SignINPassAndEmail} from '../../Firebase-folder/FireBase';
 import { useState, useContext } from 'react'; 
 import { async } from '@firebase/util';
 import {UserContext} from '../User-components/UserContext';
+
+//Sign in function
 let SignIN= ()=>{
     let fomrField= {
         email:'',
         password:''
     }
 
+    // User context
     let {setCurrentUser} = useContext(UserContext);
 
-
+        //setting empty inputs to form
     let [form,setForm]= useState(fomrField);
     let {email, password} = form;
 
@@ -25,7 +28,7 @@ let SignIN= ()=>{
         createUser(res.user)
         // console.log(res);
     }
-
+    //lets user Sign in with others
     let ChangeHandlare= (event)=>{
         let value = event.target.value;
         let name = event.target.name;
