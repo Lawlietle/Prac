@@ -1,0 +1,32 @@
+.btn{
+ padding: 1em;
+
+ margin-top: 1em;
+
+//  border: none;
+ border-radius: 10px;
+ cursor: pointer;
+
+
+ font-size: 1rem;
+
+    
+    &.invert{
+        color: white;
+        background-color: black;
+
+        &:hover{
+            color: black;
+            background-color: white;
+        }
+    }
+
+    &.google{
+        color: white;
+        background-color: #155ad1;
+
+        &:hover{
+            background-color: blue;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+
+
+@mixin  flexn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth{
+    // @include flexn();
+    // border: 1px solid red;
+    height: 100vh;
+    column-gap: 5em;
+    // border: 1px solid red;
+    width: 100vw;
+    background-image: url(https://www.pngmagic.com/product_images/website-background-image-size-psd-vector-photo.jpg);
+}

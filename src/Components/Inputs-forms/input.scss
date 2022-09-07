@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+@mixin shrink {
+    top: -22px;
+    left: -1px;
+    color: white;
+  
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-container
+{
+    // border: 1px solid red;
+    height: 50px;
+   margin-top: 1.9em;
+
+    position: relative;
+    input{
+        height: 100%;
+        font-size: 1.2rem;
+
+        
+        &::placeholder{
+            opacity: 0;
+        }
+
+        &:not(:placeholder-shown) + label{
+
+        @include shrink;
+            
+        
+        }
+
+        &:focus + label{
+          @include shrink()
+        }
+
+    }
+
+    label{
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        outline: none;
+        transition: 300ms ease all;
+        pointer-events: none;
+
+    }
+
+   
+}
